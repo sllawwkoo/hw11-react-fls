@@ -1,0 +1,151 @@
+.container {
+	width: 100%;
+	max-width: toRem(800);
+	margin-inline: auto;
+	padding-inline: toRem(15);
+	padding-block: toRem(30);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.title {
+	font-weight: 700;
+	line-height: 1.2;
+	@include adaptiveValue("font-size", 36, 24);
+	@include adaptiveValue("margin-bottom", 20, 15);
+	text-align: center;
+	text-shadow: 0px toRem(4) toRem(4) rgba(0, 0, 0, 0.25);
+}
+
+.buttonLine {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include adaptiveValue("margin-bottom", 20, 15);
+
+	.button {
+		@include adaptiveValue("padding-block", 10, 8);
+		@include adaptiveValue("padding-inline", 18, 16);
+		@include adaptiveValue("font-size", 16, 12);
+		background-color: #0077ff;
+		color: #fff;
+		font-weight: 500;
+		border: none;
+		border-radius: toRem(8);
+		cursor: pointer;
+		transition: background-color (var(--transition-base));
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #005fcc;
+			}
+		}
+	}
+}
+
+.inputLine {
+	width: 100%;
+	max-width: toRem(500);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include adaptiveValue("gap", 10, 8);
+	border: toRem(2) solid #99999980;
+	border-radius: toRem(12);
+	padding: toRem(15) toRem(20);
+	@include adaptiveValue("margin-bottom", 20, 15);
+
+	input {
+		width: 100%;
+		@include adaptiveValue("padding-block", 10, 8);
+		@include adaptiveValue("padding-inline", 14, 12);
+		@include adaptiveValue("font-size", 16, 12);
+		background-color: #f0f3f7;
+		border: toRem(1) solid #ccc;
+		border-radius: toRem(8);
+		box-shadow: inset 0 toRem(2) toRem(4) rgba(0, 0, 0, 0.1);
+		transition:
+			border-color var(--transition-ease-base),
+			box-shadow var(--transition-ease-base);
+		will-change: border-color, box-shadow;
+
+		&:focus {
+			border-color: #0077ff;
+			box-shadow: 0 0 toRem(4) rgba(0, 119, 255, 0.5);
+			outline: none;
+		}
+	}
+
+	label {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 16, 12);
+		text-shadow: 0px toRem(4) toRem(4) rgba(0, 0, 0, 0.25);
+		@include adaptiveValue("font-size", 18, 12);
+	}
+}
+
+.headerTable {
+	width: 100%;
+	max-width: toRem(500);
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	@include adaptiveValue("padding-block", 15, 10);
+	@include adaptiveValue("padding-inline", 40, 30);
+	@include adaptiveValue("margin-bottom", 20, 15);
+	background-color: #f1f2f6;
+	border-radius: toRem(12);
+	box-shadow:
+		inset toRem(2) toRem(2) toRem(4) #babecc,
+		inset toRem(-2) toRem(-2) toRem(4) #ffffff;
+
+	span {
+		flex: 1;
+		text-align: center;
+		text-shadow: 0px toRem(4) toRem(4) rgba(0, 0, 0, 0.25);
+		@include adaptiveValue("font-size", 16, 12);
+
+		&:first-child {
+			text-align: left;
+			flex: 2;
+		}
+	}
+}
+
+
+.table {
+	width: 100%;
+	max-width: toRem(500);
+	max-height: toRem(400);
+	// @include adaptiveValue("max-height", 380, 430);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// justify-content: center;
+	@include adaptiveValue("gap", 10, 8);
+	background-color: #f1f2f6;
+	border-radius: toRem(12);
+	padding: toRem(20) toRem(10);
+	box-shadow:
+		inset toRem(2) toRem(2) toRem(4) #babecc,
+		inset toRem(-2) toRem(-2) toRem(4) #ffffff;
+		overflow: auto;
+}
+
+.notFound {
+	font-weight: 600;
+	@include adaptiveValue("font-size", 18, 14);
+	color: #555;
+	margin-top: toRem(20);
+	padding: toRem(12) toRem(16);
+	text-align: center;
+	background-color: #f0f3f7;
+	border-radius: toRem(12);
+	margin-bottom: toRem(8);
+	box-shadow:
+		toRem(4) toRem(4) toRem(8) #babecc,
+		toRem(-4) toRem(-4) toRem(8) #ffffff;
+}

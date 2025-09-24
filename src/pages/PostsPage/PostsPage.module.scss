@@ -1,0 +1,76 @@
+.container {
+	width: 100%;
+	max-width: toRem(650);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	margin-inline: auto;
+	padding-inline: toRem(15);
+	padding-block: toRem(30);
+	color: #333;
+}
+
+.title {
+	@include adaptiveValue("font-size", 28, 22);
+	font-weight: bold;
+	margin-bottom: toRem(20);
+	color: #222;
+	text-align: center;
+}
+
+.button {
+	@include adaptiveValue("padding-block", 12, 8);
+	@include adaptiveValue("padding-inline", 14, 12);
+	@include adaptiveValue("font-size", 16, 12);
+	border-radius: toRem(8);
+	border: none;
+	font-weight: 600;
+	margin-bottom: toRem(15);
+	cursor: pointer;
+	background-color: #007bff;
+	color: #fff;
+	transition:
+		background-color var(--transition-ease-base),
+		transform var(--transition-ease-base);
+	will-change: background-color, transform;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background: #0056b3;
+			transform: translateY(toRem(-2));
+		}
+	}
+}
+
+.error {
+	color: #dc2626;
+	@include adaptiveValue("font-size", 16, 12);
+	font-weight: 500;
+	margin: toRem(15) 0;
+	text-align: center;
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+	margin-top: toRem(15);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: toRem(12);
+	transition: all var(--transition-ease-base);
+
+	li {
+		background: #fff;
+		padding: toRem(16);
+		border-radius: toRem(10);
+		box-shadow: 0 toRem(2) toRem(6) rgba(0, 0, 0, 0.2);
+		@include adaptiveValue("font-size", 16, 12);
+		transition: all var(--transition-ease-base);
+	}
+}
+
+.emptyList {
+	text-align: center;
+}

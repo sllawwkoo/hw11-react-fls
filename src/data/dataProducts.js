@@ -1,0 +1,17 @@
+export const products = [
+	{ id: 1, title: "Монітор Samsung", price: 8200 },
+	{ id: 2, title: "Монітор LG", price: 9100 },
+	{ id: 3, title: "Телефон iPhone", price: 29999 },
+	{ id: 4, title: "Телефон Samsung", price: 15999 },
+	{ id: 5, title: "Клавіатура Logitech", price: 2400 },
+	{ id: 6, title: "Клавіатура Razer", price: 3100 },
+	{ id: 7, title: "Мишка Logitech", price: 1500 },
+	{ id: 8, title: "Мишка Razer", price: 1900 },
+	{ id: 9, title: "Навушники Sony", price: 4999 },
+	{ id: 10, title: "Навушники JBL", price: 3200 },
+	{ id: 11, title: "Планшет iPad", price: 21999 },
+	{ id: 12, title: "Планшет Samsung", price: 14999 },
+	{ id: 13, title: "Принтер Canon", price: 6400 },
+	{ id: 14, title: "Принтер HP", price: 7200 },
+	{ id: 15, title: "Колонка JBL", price: 5600 },
+];

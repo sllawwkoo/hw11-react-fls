@@ -1,0 +1,14 @@
+:root {
+	// Шрифти
+	--font-roboto: "Roboto", sans-serif;
+	--font-shantell: "Shantell Sans", sans-serif;
+	--font-merriweather: "Merriweather", sans-serif;
+	--font-ubuntu: "Ubuntu", sans-serif;
+
+	/* === Layout === */
+	--transition-fast: 0.2s ease-in-out;
+	--transition-base: 0.3s ease-in-out;
+
+	--transition-ease-fast: 0.2s ease;
+	--transition-ease-base: 0.3s ease;
+}

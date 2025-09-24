@@ -1,0 +1,30 @@
+.product {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: toRem(12) toRem(16);
+	background-color: #f0f3f7;
+	border-radius: toRem(12);
+	margin-bottom: toRem(8);
+	box-shadow:
+		toRem(4) toRem(4) toRem(8) #babecc,
+		toRem(-4) toRem(-4) toRem(8) #ffffff;
+	transition: transform var(--transition-ease-fast);
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #e9ecf1;
+		}
+	}
+
+	span {
+		flex: 1;
+		text-align: center;
+			@include adaptiveValue("font-size", 16, 12);
+
+		&:first-child {
+			text-align: left;
+			flex: 2;
+		}
+	}
+}

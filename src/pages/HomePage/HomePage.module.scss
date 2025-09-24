@@ -1,0 +1,88 @@
+.container {
+	max-width: toRem(1200);
+	margin-inline: auto;
+	padding-inline: toRem(15);
+	padding-block: toRem(30);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	@include adaptiveValue("font-size", 36, 24);
+	font-weight: 700;
+	color: #333;
+	margin-bottom: toRem(20);
+	text-shadow: 0px toRem(4) toRem(4) rgba(0, 0, 0, 0.25);
+}
+
+.tasks {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: toRem(20);
+	padding: toRem(20);
+}
+
+.task {
+	background-color: #ffffff;
+	border-radius: toRem(12);
+	@include adaptiveValue("padding", 20, 10);
+	box-shadow: 0 toRem(4) toRem(12) rgba(0, 0, 0, 0.08);
+	transition:
+		transform var(--transition-fast),
+		box-shadow var(--transition-fast);
+
+	&:hover {
+		box-shadow: 0 toRem(6) toRem(16) rgba(0, 0, 0, 0.12);
+	}
+}
+
+.taskTitle {
+	@include adaptiveValue("font-size", 20, 14);
+	font-weight: 600;
+	color: #333;
+	margin-bottom: toRem(10);
+
+	span {
+		color: #0077ff;
+		font-weight: 700;
+		margin-right: toRem(6);
+	}
+}
+
+.taskDescription {
+	@include adaptiveValue("font-size", 16, 10);
+	line-height: 1.5;
+	color: #555;
+
+	span {
+		font-weight: 600;
+		color: #111;
+	}
+}
+
+.taskButton {
+	align-self: flex-start;
+	margin-top: toRem(15);
+	@include adaptiveValue("padding-block", 10, 8);
+	@include adaptiveValue("padding-inline", 18, 16);
+	background-color: #0077ff;
+	color: #fff;
+	@include adaptiveValue("font-size", 16, 12);
+	font-weight: 500;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color (var(--transition-base));
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #005fcc;
+		}
+	}
+
+	@media (max-width: $mobileSmall) {
+		width: 100%;
+	}
+}
